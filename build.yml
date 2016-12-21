@@ -3,12 +3,6 @@
   connection: local
 
   tasks:
-    - fail: msg="extra-var branch not defined"
-      when: branch is not defined
-    - fail: msg="extra-var workspace not defined"
-      when: workspace is not defined
-    - fail: msg="extra-var repo not defined"
-      when: repo is not defined
     - name: ensure workspace/branch dir exists
       file: path={{ workspace }}/{{branch}} state=directory
     - name: Clone or update Cosnics repo
