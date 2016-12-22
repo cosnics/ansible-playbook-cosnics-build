@@ -11,3 +11,4 @@
       composer:
         command: update
         working_dir: "{{ workspace }}/{{branch}}"
+        no-dev: false
