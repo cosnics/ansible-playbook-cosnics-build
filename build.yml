@@ -8,4 +8,6 @@
     - name: Clone or update Cosnics repo
       git: repo={{ repo }} dest={{ workspace }}/{{branch}} version={{ branch }} force=yes
     - name: Composer update
-      composer: command="update" working_dir={{ workspace }}/{{branch}}
+      composer:
+        command: update
+        working_dir: "{{ workspace }}/{{branch}}"
